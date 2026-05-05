@@ -1,0 +1,32 @@
+NAVIGATION GUIDE OF LINUXIA
+
+  A directory is a folder that can contain files and other folders.
+  Your cottage is your home directory, written as ~ in many commands.
+
+  An absolute path starts from the root of the whole system, like:
+    /home/traveler/castle/tower
+
+  A relative path starts from where you are standing, like:
+    castle/tower
+    ../tower
+
+  The dot . means "here," the current directory.
+  The two dots .. mean "one level up," the parent directory.
+  The tilde ~ is shorthand for your home directory.
+
+  Press the Tab key while typing a filename to have it completed
+  automatically! If nothing happens, press Tab twice to see all options.
+
+  Commands and filenames are case-sensitive! Castle and castle are different.
+
+  Common errors:
+    No such file or directory -- check spelling, and check where you are with pwd
+    Permission denied         -- you don't have access to this file yet
+    command not found         -- check spelling of the command name
+
+  Recovery habits:
+    cd by itself always takes you home.
+    pwd always tells you where you are.
+    ls shows what names are available here.
+
+  Move slowly, read messages carefully, and let paths guide you.

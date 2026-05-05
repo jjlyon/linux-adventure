@@ -1,0 +1,26 @@
+
+╔═══════════════════════════════════════════════════╗
+║        ✦ THE BELL OF LINUXIA RINGS ✦             ║
+╚═══════════════════════════════════════════════════╝
+
+  Merlin raises his staff, and every window in the castle
+  shines with starlight.
+
+  "Congratulations, traveler. You have completed all quests.
+  You learned to read files, navigate directories, search by
+  name and by text, write and append, organize files, unlock
+  permissions, chain commands with pipes, and seek your own help
+  from manuals and command summaries.
+
+  You are now a Shell Knight of the Kingdom of Linuxia!"
+
+  The real world beyond this kingdom works the same way. Every
+  server, every cloud machine, every Linux system responds to
+  the commands you've learned.
+
+  Type quest map whenever you wish to see your completed journey.
+  Try exploring more commands with man. There are thousands of
+  commands to discover.
+
+  Farewell for now, Shell Knight. May your prompts be clear,
+  your paths be true, and your curiosity never grow dim.

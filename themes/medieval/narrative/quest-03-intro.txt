@@ -1,0 +1,10 @@
+  Ancient runes are hidden in the Enchanted Forest.
+
+  Your task is to find three rune fragments and combine their
+  words into:
+
+    ~/enchanted_forest/combined_runes.txt
+
+  The owl in the ancient oak knows search commands that can help.
+  Try: cd ~/enchanted_forest to enter the forest.
+  Look around, read what you find, and let the forest teach you.

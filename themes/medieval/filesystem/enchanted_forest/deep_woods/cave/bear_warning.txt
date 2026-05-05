@@ -1,0 +1,8 @@
+BEAR WARNING
+
+  This cave is home to a rather grumpy bear.
+  Proceed quietly, do not clang armor, and avoid singing victory songs.
+
+  The bear is currently hibernating, so you are safe... for now.
+  If the bear wakes, offer honey, apologize to the cave, and retreat
+  with the dignity available to a person running very quickly.

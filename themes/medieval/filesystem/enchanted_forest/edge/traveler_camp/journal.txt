@@ -1,0 +1,20 @@
+JOURNAL OF A PREVIOUS TRAVELER
+
+  I found the forest wider than my courage at first.
+  The owl taught me to find by name, and the fairies taught me
+  to search for words inside files.
+
+  I found three rune fragments! To record them all in
+  one scroll, I wrote the first one like this:
+
+    echo "IRON" > combined_runes.txt
+
+  Then I ADDED the others to the same file:
+
+    echo "HEART" >> combined_runes.txt
+    echo "OAK" >> combined_runes.txt
+
+  Remember: > replaces, >> adds to the end!
+
+  If you make the combined scroll in the forest directory,
+  Merlin will know the runes have been gathered.
