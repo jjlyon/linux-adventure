@@ -1,0 +1,46 @@
+BY ROYAL DECREE: CENSUS QUESTION
+
+  The King requires a count of unique family names in the census.
+  The answer will guide tax relief, bridge repairs, and how many
+  pies the harvest festival must bake.
+
+  Sometimes you need to pass the result of one command
+  into another, like handing a letter from person to person.
+  The | symbol (called a "pipe") does exactly this:
+
+    command1 | command2
+
+  The output of command1 becomes the input of command2.
+
+  Useful commands for this task:
+
+    sort <file>    - sort lines in alphabetical order
+    uniq           - remove duplicate lines that are next to each other
+                     (this is why you sort first!)
+    wc -l          - count the number of lines
+
+  Example: To count unique items in a shopping list:
+
+    cat shopping.txt | sort | uniq | wc -l
+
+  This takes the file, sorts it, removes duplicates,
+  then counts how many unique lines remain.
+
+  The census is in census_records.txt. It has two columns
+  separated by commas: id and family name. The first line
+  is a header.
+
+  Your task: How many UNIQUE family names are there?
+
+  Hints:
+    - You need to extract just the family name column
+    - The cut command can extract columns: cut -d, -f2
+    - Don't forget to skip the header line!
+
+  Write your answer (just the number) to:
+
+    echo "<number>" > census_answer.txt
+
+  For the ancient manuals on any command, type man <command>.
+  These manuals are thorough. You already know how to navigate
+  long text like less. Press q to exit.

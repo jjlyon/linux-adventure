@@ -1,0 +1,12 @@
+  Merlin's whisper stirs the candle flame.
+
+  Your first task is to read the scroll on your cottage table.
+  Use cat to display a file's contents.
+
+    cat welcome_scroll.txt
+
+  The scroll will guide you from there and teach you how to sign
+  the traveler's log. If you see "No such file or directory",
+  check the spelling and remember that filenames are case-sensitive.
+
+  If you haven't yet, start by typing: cat welcome_scroll.txt

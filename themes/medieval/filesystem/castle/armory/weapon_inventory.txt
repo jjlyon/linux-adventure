@@ -1,0 +1,15 @@
+ARMORY WEAPON INVENTORY
+
+  Arming swords: 18, sharpened and oiled
+  Ash spears: 27, bundled by length
+  Battle axes: 9, inspected for loose heads
+  Crossbows: 12, strings waxed
+  Daggers: 44, counted twice after last year's incident
+  Halberds: 7, stored near the tall door
+  Practice staves: 31, safe for apprentices
+  Royal ceremonial sword: 1, not for chopping vegetables
+  Training shields: 22, dents expected
+  War hammers: 6, heavy enough to settle arguments
+
+  This inventory is kept in alphabetical order. The armorer uses
+  some kind of sorting magic and insists it saves time.

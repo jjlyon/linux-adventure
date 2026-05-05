@@ -1,0 +1,10 @@
+  A royal summons waits within the castle.
+
+  Your task: navigate to the castle tower and create a report.
+  Use ls to see what is around you.
+  Use cd <folder> to enter a folder, and cd .. to go back.
+  Use pwd to check where you are standing.
+
+  Start at the castle's great hall. Look for a royal decree.
+  If you are lost, type cd by itself to return to your cottage.
+  Then set out again with fresh bearings.

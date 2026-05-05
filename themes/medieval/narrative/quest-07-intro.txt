@@ -1,0 +1,10 @@
+  The Royal Archives hold the kingdom census.
+
+  Read archives/census_quest.txt and answer the question there.
+  Write your final answer to:
+
+    ~/archives/census_answer.txt
+
+  The | symbol, called a pipe, passes one command's output into
+  another command. You will need sort, uniq, and wc combined together.
+  The archives scroll gives hints, but the solving is yours.

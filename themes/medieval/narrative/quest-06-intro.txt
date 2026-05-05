@@ -1,0 +1,11 @@
+  The mountain pass is blocked by a sealed gate.
+
+  The file gate_lock.txt in mountain_pass/sealed_gate/ is protected.
+  Go to the guard tower first to learn about permissions.
+
+  The command ls -l shows protection details on files.
+  The duty roster explains how to change protections with chmod,
+  and why this lock requires sudo authority.
+
+  Begin at:
+    cd ~/mountain_pass/guard_tower
