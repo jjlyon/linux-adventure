@@ -1,0 +1,13 @@
+MERCHANT NOTE
+
+  The old merchant mutters to himself as he sorts his wares.
+  "Every tool in this land comes with instructions if you know how to ask!"
+
+  He taps a crate with his counting stick.
+  "Try typing ls --help sometime and see what happens."
+
+  Most commands will tell you all their secrets if you just add
+  --help after them.
+
+  The merchant smiles. "Not every answer needs a wizard.
+  Sometimes you ask the tool directly and listen to what it says."

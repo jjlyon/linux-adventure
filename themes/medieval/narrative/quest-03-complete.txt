@@ -1,0 +1,26 @@
+
+  ✦ ═══════════════════════════════════════ ✦
+
+  Well done, traveler! Quest 3 is complete.
+
+  Skills learned:
+    find . -name "<pattern>"      - find files by name
+    grep "<word>" <file>          - search for text inside a file
+    grep -r "<word>" <directory>  - search for text in all files in a directory
+
+  Quest Progress: [██████░░░░░░░░░░] 3/8
+
+  Merlin the Wise says:
+
+  The village needs your help! The notice board needs a posting
+  and the tavern's guest book awaits your signature.
+
+  Remember the two writing marks:
+    >  writes to a file, REPLACING everything in it
+    >> ADDS to the end of a file without erasing what is there
+
+  Head to the village:
+
+    cd ~/village
+
+  Check the notice board instructions to get started.

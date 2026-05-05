@@ -1,0 +1,36 @@
+GUARD TOWER DUTY ROSTER AND SECURITY PROTOCOLS
+
+  Captain's note: the sealed gate is protected by file permissions.
+  Recruits must understand the marks before touching the lock.
+
+  To inspect the protections on a file, use:
+
+    ls -l <filename>
+
+  You'll see something like: -rwxrw-r-- which shows
+  who can do what:
+    r = read (view the file)
+    w = write (change the file)
+    x = execute (run the file as a program)
+
+  The first rwx is for the owner, the next for the
+  group, the last for everyone else.
+
+  The sealed gate's lock file has no permissions set.
+  No one can read it until the protections are changed.
+
+  To change permissions, use chmod. Since the gate file
+  is specially protected, you need sudo (special authority):
+
+    sudo chmod a+r <filepath>
+
+  This adds read permission for all users.
+
+  Try this on the gate lock:
+
+    sudo chmod a+r ~/mountain_pass/sealed_gate/gate_lock.txt
+
+  After chmod, read the lock with cat to complete the quest.
+  From here, go to the sealed gate:
+
+    cd ../sealed_gate

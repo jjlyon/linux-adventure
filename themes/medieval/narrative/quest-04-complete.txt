@@ -1,0 +1,24 @@
+
+  ✦ ═══════════════════════════════════════ ✦
+
+  Well done, traveler! Quest 4 is complete.
+
+  Skills learned:
+    echo "text" > <file>    - write text to a file (replaces contents!)
+    echo "text" >> <file>   - add text to end of a file (keeps existing contents)
+
+  Quest Progress: [████████░░░░░░░░] 4/8
+
+  Merlin the Wise says:
+
+  The village blacksmith needs help organizing the workshop!
+
+  You will need mkdir to make a new folder, cp to copy,
+  mv to move or rename, and rm to remove.
+
+  Go to the blacksmith:
+
+    cd ~/village/blacksmith
+
+  Read the orders to see what needs doing.
+  The command reference scroll in the castle library has the patterns for these commands.

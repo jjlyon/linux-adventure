@@ -1,0 +1,24 @@
+
+  ✦ ═══════════════════════════════════════ ✦
+
+  Well done, traveler! Quest 7 is complete.
+
+  Skills learned:
+    command1 | command2   - pipe: feed output of one command into another
+    sort <file>           - sort lines alphabetically
+    uniq                  - remove adjacent duplicate lines
+    wc -l                 - count the number of lines
+
+  Quest Progress: [██████████████░░] 7/8
+
+  Merlin the Wise says:
+
+  A new scroll has appeared in your cottage -- the Sage's Final Challenge!
+
+  The sage believes a true Shell Knight should be able to find answers on their own.
+  Go home with:
+
+    cd
+
+  Then read sages_challenge.txt.
+  This time, you must discover the answers yourself using the ancient manuals.

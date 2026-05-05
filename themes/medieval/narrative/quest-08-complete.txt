@@ -1,0 +1,14 @@
+
+  ✦ ✦ ✦ ═════════════════════════════════════════ ✦ ✦ ✦
+
+  You have answered the Sage's questions!
+
+  Skills learned:
+    man <command>         - read the full manual for a command
+    <command> --help      - quick help summary
+    history               - show commands you've used before
+
+  Quest Progress: [████████████████] 8/8
+
+  These three tools mean you can learn ANY command on your own now.
+  Merlin steps forward for the final blessing...

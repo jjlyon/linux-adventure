@@ -1,0 +1,23 @@
+NOTES OF ASTRONOMER NIMA
+
+  Midnight watch: the northern stars shivered like lanterns in wind.
+  First bell: three green sparks fell toward the enchanted forest.
+  Second bell: the ancient oak glowed, though no moon touched it.
+  Third bell: I heard an owl call out a word that sounded like "rune."
+
+  This must be reported before the court dismisses it as weather.
+  Traveler, stand at the window and record what you have seen.
+
+  Write a report about what you've seen. Type exactly:
+
+    echo "stars are falling" > my_report.txt
+
+  The general pattern is:
+
+    echo "<text>" > <filename>
+
+  This creates a file named my_report.txt in this tower and writes
+  your report inside it. Creating that report completes your task here.
+
+  You can verify your work by typing ls to see the new file,
+  or cat my_report.txt to read it back.

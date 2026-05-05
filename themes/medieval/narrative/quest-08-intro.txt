@@ -1,0 +1,11 @@
+  The Sage's Final Test has arrived.
+
+  Read:
+    ~/sages_challenge.txt
+
+  Answer the three questions and write your answers to:
+    ~/sages_answers.txt
+
+  Use man <command> to read the manual for any command.
+  Use <command> --help for a quick summary.
+  Press q to exit a manual page, just like less.
