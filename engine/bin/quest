@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+source "${SQ_ENGINE_DIR}/lib/progress.sh"; current=$(get_current_quest)
+case "${1:-status}" in
+  status) [[ "$current" == done ]] && echo "All quests complete." || cat "${SQ_THEME_DIR}/narrative/quest-${current}-intro.txt" ;;
+  map) for i in 01 02 03 04 05 06 07 08; do [[ "$current" == done || 10#$i -lt 10#$current ]] && s='✓' || s=' '; echo "[$s] Quest $i"; done ;;
+  reset) rm -rf "$HOME"/{castle,enchanted_forest,village,mountain_pass,archives,welcome_scroll.txt,lore_of_the_realm.txt,travelers_log.txt,sages_challenge.txt,sages_answers.txt}; cp -a "$SQ_THEME_DIR/filesystem/." "$HOME/"; set_current_quest 01; echo "Reset complete." ;;
+  *) echo "Usage: quest [map|reset]"; exit 1 ;;
+esac

@@ -1,0 +1,5 @@
+Use ls -l to inspect permissions.
+r means read, w write, x execute.
+Use chmod to change bits. You may need sudo for gate_lock.txt.
+Pattern:
+  sudo chmod u+r <file>

@@ -1,0 +1,1 @@
+Combine runes into combined_runes.txt using > then >>.

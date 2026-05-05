@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+: "${SQ_THEME_DIR:=/opt/shell-quest/theme}"; : "${SQ_STATE_FILE:=$HOME/.shell-quest/state}"
+mkdir -p "$HOME/.shell-quest"
+if [[ ! -f "$SQ_STATE_FILE" ]]; then
+  cp -a "$SQ_THEME_DIR/filesystem/." "$HOME/"
+  printf 'CURRENT_QUEST=01\n' > "$SQ_STATE_FILE"
+fi

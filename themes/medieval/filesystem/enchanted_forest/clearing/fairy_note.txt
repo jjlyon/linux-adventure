@@ -1,0 +1,4 @@
+Search text inside files with:
+  grep "RUNE" rune_fragment_1.txt
+General pattern:
+  grep "<word>" <filename>

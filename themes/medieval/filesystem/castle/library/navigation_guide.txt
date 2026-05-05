@@ -1,0 +1,5 @@
+If you mistype a command, Bash prints an error.
+Use Tab to auto-complete names.
+Commands and names are case-sensitive.
+If lost: pwd.
+Go home: cd

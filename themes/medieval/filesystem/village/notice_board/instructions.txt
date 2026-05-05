@@ -1,0 +1,7 @@
+Use > to overwrite and >> to append.
+Example now:
+  echo "Help wanted at dawn" > quest_notice.txt
+Pattern:
+  echo "<text>" > <filename>
+Then append your name in tavern guest book:
+  echo "<your name>" >> ../tavern/guest_book.txt

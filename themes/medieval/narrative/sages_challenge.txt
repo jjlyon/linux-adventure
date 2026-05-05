@@ -1,0 +1,5 @@
+Sage's Final Test:
+1) Find what ls -a does using: ls --help
+2) Find how to sort reverse with: man sort
+3) View your past commands with: history
+Write answers into sages_answers.txt
