@@ -1,0 +1,24 @@
+NOTICE BOARD INSTRUCTIONS
+
+  The village needs a quest notice posted! And the tavern keeper
+  asks all travelers to sign the guest book.
+
+  The > symbol writes text to a file. If the file exists,
+  it REPLACES everything in it:
+
+    echo "Help wanted: dragon spotted near the bridge" > quest_notice.txt
+
+  The >> symbol ADDS text to the end of a file without
+  erasing what's already there:
+
+    echo "Your Name" >> ../tavern/guest_book.txt
+
+  BE CAREFUL: > replaces, >> adds. If you use > on a file
+  that already has content, the old content is gone!
+
+  Your two tasks:
+    1. Create quest_notice.txt here using >
+    2. Add your name to the tavern guest book using >>
+
+  The tavern is nearby -- from here:
+    cd ../tavern

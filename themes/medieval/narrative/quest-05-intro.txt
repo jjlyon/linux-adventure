@@ -1,0 +1,13 @@
+  The blacksmith's workshop needs ordering.
+
+  Create a completed folder, move orders.txt into it, and remove
+  raw_materials.txt when the materials are used up.
+
+  Commands you will need: mkdir, mv, and rm.
+  The orders.txt file has the details.
+
+  Go to:
+    cd ~/village/blacksmith
+
+  The command reference in ~/castle/library/command_reference.txt
+  has the syntax if you need a reminder.

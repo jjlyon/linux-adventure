@@ -1,0 +1,33 @@
+BLACKSMITH'S ORDER SCROLL
+
+  Traveler, I am Branna the Blacksmith, and my workshop looks as if
+  a tornado tried to learn metalwork.
+
+  I need the work marked complete and the leftover list cleared away.
+  You have already learned how to read files, navigate folders, and
+  write notes. Now you will organize.
+
+  1. Create a new folder called completed for finished work.
+     The command to make a new folder is mkdir.
+
+     Pattern:
+       mkdir <foldername>
+
+  2. Move this orders scroll into the completed folder so I know
+     the work is done. The mv command moves files.
+
+     Pattern:
+       mv <source> <destination>
+
+  3. Throw away the raw materials list -- we've used everything up.
+     The rm command removes files.
+
+     Pattern:
+       rm <filename>
+
+  Be careful with rm -- removed files cannot be recovered!
+
+  If you need the exact patterns, check the command reference scroll
+  in the castle library:
+
+    cat ~/castle/library/command_reference.txt

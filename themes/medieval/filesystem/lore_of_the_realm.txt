@@ -1,0 +1,99 @@
+═══════════════════════════════════════════════════
+             LORE OF THE REALM OF LINUXIA
+═══════════════════════════════════════════════════
+
+  In the first age, before roads had names, travelers crossed the wild plains by memory alone.
+  Then came Ada of the Lantern, who marked the first safe path with stones of white chalk.
+  Where her last lantern burned out, she founded the cottage where new travelers now awaken.
+  Around that humble hearth, the earliest folk learned to keep records on clean parchment.
+  Merlin the Wise arrived in winter, carrying a staff carved with tiny command runes.
+  He taught that a written command, given with care, could move through the world like a key.
+
+  ─── THE FOUNDING OF THE CASTLE ───────────
+  King Torvalds raised the castle not to shut people out, but to give knowledge a strong home.
+  Its great_hall became the place where royal decrees were posted for all who could read.
+  The tower was built for astronomers who watched the sky and wrote careful reports.
+  The library gathered scrolls from every craft: navigation, searching, permissions, and lore.
+  Beneath the flagstones, the dungeon kept not villains alone, but old warnings and strange journals.
+  Beside the barracks, the armory cataloged shields, helms, and blades with patient precision.
+  Castle scribes were famous for knowing exactly where they stood before taking another step.
+  They would pause, look around, and only then choose the next door.
+
+  ─── THE VILLAGE AND ITS CRAFTS ───────────
+  South of the castle grew the village, loud with bells, market cries, and tavern songs.
+  The notice_board stood at its center, where news could be overwritten or carefully appended.
+  The tavern kept a guest book, because names matter when roads become long and stories become old.
+  The blacksmith shaped iron for farmers, guards, bridge builders, and wandering heroes.
+  In that workshop, half-finished orders once piled so high they blocked the forge door.
+  A wise smith learned that a tidy shop turns hard labor into steady progress.
+  The market merchants priced apples, rope, candles, ink, and suspiciously shiny dragon scales.
+  They joked that every tool in Linuxia would explain itself to anyone who asked properly.
+
+  ─── THE ENCHANTED FOREST ─────────────────
+  North and east lies the enchanted_forest, where paths split and roots curl like sleeping serpents.
+  The ancient_oak at its heart is older than the castle and possibly older than Merlin.
+  An owl lives there who remembers every hidden trail, every buried fragment, every whispered word.
+  Fairies dance in the clearing and hide messages inside songs, riddles, and mushroom caps.
+  Deep_woods paths lead to a hollow_tree, a cave with a hibernating bear, and a silver stream.
+  At the forest edge, old traveler camps preserve journals from those who learned by trying.
+  Three rune fragments were scattered there after the Moonlit Storm: IRON, HEART, and OAK.
+  The runes are harmless apart, but together they remind the kingdom what courage is made from.
+
+  ─── THE MOUNTAIN PASS ────────────────────
+  Beyond the village road rises the mountain_pass, narrow as a blade and cold even in summer.
+  A guard_tower watches the switchbacks, its roster full of rules about who may enter.
+  The sealed_gate was forged after goblins learned to read unattended royal maps.
+  Its lock does not open to strength, shouting, or wishing, but to correct permission.
+  Many travelers first see only refusal there and think the mountain hates them.
+  Merlin says refusal is sometimes a lesson wearing armor.
+  Past the gate waits a treasure_vault full of rewards, jokes, and items no one should touch.
+  The pass teaches that power must be handled openly, carefully, and for a purpose.
+
+  ─── THE ROYAL ARCHIVES ───────────────────
+  West of the castle stand the archives, quiet halls where dust motes drift like tiny moons.
+  Census ledgers record bakers, millers, masons, weavers, and every family that keeps Linuxia alive.
+  Archivists do not count by staring until their eyes blur; they combine small reliable steps.
+  One clerk sorts names, another removes neighboring duplicates, another counts the remaining lines.
+  A pipe between commands is like a courier passing a sealed letter from desk to desk.
+  Battle logs, tax records, and old maps are kept for practice as much as memory.
+  The archives teach that large questions become manageable when the work is chained well.
+
+  ─── NOTABLE FOLK OF LINUXIA ──────────────
+  Merlin the Wise guides beginners without mocking their first uncertain commands.
+  King Torvalds values clear reports more than grand speeches.
+  Sage Elara asks questions that send students toward manuals instead of answers.
+  Astronomer Nima watches falling stars from the tower and writes in ink the color of midnight.
+  Branna the Blacksmith can mend a plow, shoe a griffin, and organize a bench by sunrise.
+  Old Tom of the tavern claims he once defeated a troll by checking his spelling twice.
+  The archive clerks argue about commas, headers, and whether dragons should be counted as residents.
+
+  ─── A TRAVELER'S PROMISE ────────────────
+  Linuxia rewards attention more than haste.
+  If a path fails, look where you stand.
+  If a name fails, check every letter.
+  If a scroll is long, read it page by page.
+  If a command is unknown, seek its own help.
+  Every region of the realm is a lesson disguised as a place.
+  Every file is a voice waiting for the right command.
+  Every directory is a room, and every room can lead onward.
+  You arrive with no sword, no horse, and no map but curiosity.
+
+  ───────────────────────────────────────────────
+
+  MERLIN'S TASK FOR YOU:
+
+  You have read the ancient lore -- well done!
+  Now sign the traveler's log to mark your arrival
+  in our kingdom.
+
+  The echo command lets you write text. To create
+  a new file with your name in it, type:
+
+    echo "your name here" > travelers_log.txt
+
+  Replace "your name here" with whatever you like,
+  but keep the quotes! The > symbol means "write
+  this text into a file." You will learn more about
+  this later.
+
+  Try it now!

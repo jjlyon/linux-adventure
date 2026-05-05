@@ -1,0 +1,21 @@
+EXCERPT FROM THE ANCIENT TOME
+
+  Long before the castle library had shelves, the scribes of Linuxia
+  kept secrets in small files tucked beside ordinary records.
+
+  The ancient scribes could view invisible entries by invoking ls -a,
+  the sacred "show all" incantation.
+
+  Files that begin with a . are hidden from normal view. The scribes
+  used this to keep drafts, notes, and experimental spells from cluttering
+  the daily ledgers.
+
+  A hidden file is not gone; it is merely omitted from the ordinary list.
+  This is why careful scholars sometimes look with ls -a before declaring
+  a room empty.
+
+  Merlin warns that secrets are still files. They can be read, changed,
+  copied, and removed when permissions allow it.
+
+  The wisest archivists keep their names clear, their paths tidy, and
+  their notes where future travelers can discover them.
