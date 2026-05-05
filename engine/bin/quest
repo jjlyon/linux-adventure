@@ -1,0 +1,105 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+source "${SQ_ENGINE_DIR}/lib/progress.sh"
+source "${SQ_ENGINE_DIR}/lib/common.sh"
+
+current=$(get_current_quest)
+
+case "${1:-status}" in
+    status)
+        if [[ "$current" == "done" ]]; then
+            printf '
+  All quests complete! You are a true Shell Knight.
+'
+            progress_bar
+            printf '
+'
+        else
+            source "${SQ_THEME_DIR}/quests/quest-${current}.conf"
+            printf '
+'
+            progress_bar
+            printf '
+  %bCurrent Quest:%b %s - %s
+
+' "$SQ_BOLD" "$SQ_RESET" "$(quest_number "$current")" "$QUEST_TITLE"
+            cat "${SQ_THEME_DIR}/narrative/quest-${current}-intro.txt"
+        fi
+        ;;
+    map)
+        printf '
+  %b═══ QUEST MAP ═══%b
+
+' "$SQ_BOLD" "$SQ_RESET"
+        for i in 01 02 03 04 05 06 07 08; do
+            source "${SQ_THEME_DIR}/quests/quest-${i}.conf"
+            if [[ "$current" == "done" ]] || [[ "10#$i" -lt "10#$current" ]]; then
+                printf '  %b[✓]%b Quest %s: %s
+' "$SQ_GREEN" "$SQ_RESET" "$((10#$i))" "$QUEST_TITLE"
+            elif [[ "$i" == "$current" ]]; then
+                printf '  %b[>]%b Quest %s: %s  %b(current)%b
+' "$SQ_YELLOW" "$SQ_RESET" "$((10#$i))" "$QUEST_TITLE" "$SQ_YELLOW" "$SQ_RESET"
+            else
+                printf '  [ ] Quest %s: %s
+' "$((10#$i))" "$QUEST_TITLE"
+            fi
+        done
+        printf '
+'
+        progress_bar
+        printf '
+'
+        ;;
+    reset)
+        printf '  This will reset all progress and restore the original files.
+'
+        printf '  Are you sure? Type YES to confirm: '
+        read -r confirm
+        if [[ "$confirm" == "YES" ]]; then
+            # Remove quest-created files, but do not remove the directory tree.
+            # The user's interactive shell may currently be inside one of these
+            # directories; deleting it would leave bash in a missing cwd and
+            # produce getcwd/job-control errors after reset completes.
+            rm -f "$HOME"/{travelers_log.txt,sages_challenge.txt,sages_answers.txt}
+            rm -f "$HOME/castle/tower/my_report.txt"
+            rm -f "$HOME/enchanted_forest/combined_runes.txt"
+            rm -f "$HOME/village/notice_board/quest_notice.txt"
+            rm -f "$HOME/village/blacksmith/completed/orders.txt"
+            rm -f "$HOME/archives/census_answer.txt"
+            rm -f "$HOME/mountain_pass/sealed_gate/gate_lock.txt"
+            rm -f "$HOME/mountain_pass/sealed_gate/sigil_report.txt"
+            rm -f "$HOME/mountain_pass/treasure_vault/treasure_manifest.txt"
+
+            current_pwd="${PWD:-}"
+            completed_dir="$HOME/village/blacksmith/completed"
+            case "$current_pwd" in
+                "$completed_dir"|"$completed_dir"/*)
+                    ;;
+                *)
+                    rm -rf "$completed_dir"
+                    ;;
+            esac
+
+            cp -a "$SQ_THEME_DIR/filesystem/." "$HOME/"
+            chmod 000 "$HOME/mountain_pass/sealed_gate/gate_lock.txt" 2>/dev/null || true
+            chmod 000 "$HOME/mountain_pass/treasure_vault/treasure_manifest.txt" 2>/dev/null || true
+            set_current_quest 01
+            printf '  Reset complete. Type quest to see your first objective.
+'
+        else
+            printf '  Reset cancelled.
+'
+        fi
+        ;;
+    *)
+        printf 'Usage: quest [map|reset]
+'
+        printf '  quest        Show current objective
+'
+        printf '  quest map    Show all quests and progress
+'
+        printf '  quest reset  Start over from the beginning
+'
+        ;;
+esac

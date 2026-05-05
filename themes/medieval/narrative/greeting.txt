@@ -1,0 +1,18 @@
+╔═══════════════════════════════════════════════════╗
+║                                                   ║
+║   Hail and well met, traveler!                    ║
+║   Welcome to the Kingdom of Linuxia.              ║
+║                                                   ║
+╚═══════════════════════════════════════════════════╝
+
+  You have arrived at your cottage after a long journey.
+  Before you on the table lies a scroll.
+
+  In this world, you interact by typing commands
+  and pressing Enter.
+
+  To read the scroll, type the following and press Enter:
+
+    cat welcome_scroll.txt
+
+  Try it now!

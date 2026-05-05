@@ -1,0 +1,37 @@
+═══════════════════════════════════════════════════
+              THE WELCOME SCROLL
+═══════════════════════════════════════════════════
+
+  Hail, traveler! I am Merlin the Wise, keeper of
+  this realm's knowledge.
+
+  You have just used your first command: cat
+  The cat command displays the contents of a file
+  on your screen. You can use it on any file:
+
+    cat <filename>
+
+  Replace <filename> with the name of whatever file
+  you wish to read.
+
+  Now, there is a longer scroll here as well --
+  the Lore of the Realm. It is too long to read
+  with cat (it will scroll past too quickly).
+  For longer texts, use the less command instead:
+
+    less lore_of_the_realm.txt
+
+  When reading with less:
+    - Press SPACEBAR to go to the next page
+    - Press b to go back a page
+    - Press q to quit and return to the prompt
+
+  Read the Lore of the Realm now. There is an
+  important task for you at the very end!
+
+  HELPFUL TIP: If you ever see "No such file or
+  directory" it means you mistyped the filename.
+  Filenames must be typed exactly, including the
+  .txt part. Upper and lower case matter too!
+
+═══════════════════════════════════════════════════

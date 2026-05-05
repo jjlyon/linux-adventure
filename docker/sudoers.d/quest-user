@@ -1,0 +1,1 @@
+traveler ALL=(root) NOPASSWD: /bin/chmod * /home/traveler/mountain_pass/sealed_gate/*, /usr/bin/chmod * /home/traveler/mountain_pass/sealed_gate/*, /bin/chmod * /home/traveler/mountain_pass/treasure_vault/*, /usr/bin/chmod * /home/traveler/mountain_pass/treasure_vault/*

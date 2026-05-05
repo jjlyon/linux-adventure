@@ -1,0 +1,36 @@
+THE OWL'S MESSAGE
+
+  Hoo, traveler. The forest is broad, and the patient do not
+  open every leaf by hand. Search with purpose.
+
+  To find files hidden in the forest, use the find command:
+
+    find . -name "rune_fragment_*.txt"
+
+  This searches the current folder and everything inside it
+  for files matching the pattern. The * means "anything."
+
+  General pattern:
+    find <where> -name "<pattern>"
+
+  The . means "start searching from here." You can also
+  search from your home: find ~ -name "<pattern>"
+
+  To search for text INSIDE files, use grep:
+
+    grep "RUNE" rune_fragment_1.txt
+
+  This shows any line containing the word "RUNE" in that file.
+  To search all files in a directory at once:
+
+    grep -r "RUNE" .
+
+  The -r means "search recursively" (in all sub-folders too).
+
+  General pattern:
+    grep "<word>" <filename>
+    grep -r "<word>" <directory>
+
+  There are three rune fragments hidden in this forest. Once you
+  find them all, combine their words into a single file:
+    enchanted_forest/combined_runes.txt

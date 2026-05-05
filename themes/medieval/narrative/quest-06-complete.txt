@@ -1,0 +1,24 @@
+
+  ✦ ═══════════════════════════════════════ ✦
+
+  Well done, traveler! Quest 6 is complete.
+
+  Skills learned:
+    ls -l                     - show detailed file info including permissions
+    chmod <mode> <file>       - change file permissions
+    sudo <command>            - run a command with special privileges
+
+  Quest Progress: [████████████░░░░] 6/8
+
+  Merlin the Wise says:
+
+  Permissions control who can read (r), write (w), or execute (x) files.
+
+  The Royal Archives hold the kingdom's census records. The king needs answers!
+  You will learn to chain commands together, passing the output of one into the next.
+
+  Go to the archives:
+
+    cd ~/archives
+
+  Read the census quest scroll there for your mission.

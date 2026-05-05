@@ -1,0 +1,15 @@
+THE ROYAL FEAST MENU
+
+  Starter: Turnip soup with moon-salt and garden thyme
+  Bread: Braided rye loaves shaped like tiny dragons
+  Main: Herb-roasted pheasant with blackberry glaze
+  Main: Lentil pie for scholars who prefer quiet meals
+  Side: Buttered carrots from the village market
+  Side: Castle beans with cracked pepper
+  Dessert: Honey cakes stamped with the royal penguin seal
+  Dessert: Apple tarts cooled on the north windowsill
+  Drink: Spiced cider, mint water, and suspiciously fizzy potion
+
+  The head chef keeps a detailed list. If this menu were longer,
+  you could use less feast_menu.txt to read it page by page.
+  But for short files like this, cat works just fine!
