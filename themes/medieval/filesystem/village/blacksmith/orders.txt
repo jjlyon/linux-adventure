@@ -1,0 +1,2 @@
+Create a completed folder with mkdir, copy raw_materials.txt into it as raw_materials_copy.txt, then remove raw_materials.txt.
+Use command_reference.txt in castle/library if needed.

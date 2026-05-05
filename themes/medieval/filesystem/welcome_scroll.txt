@@ -1,0 +1,10 @@
+THE WELCOME SCROLL
+Type exactly:
+  cat lore_of_the_realm.txt
+The cat command displays a file on your screen.
+General pattern:
+  cat <filename>
+For long files use less:
+  less lore_of_the_realm.txt
+Press SPACE for next page, b for back, q to quit.
+If you see 'No such file or directory', check spelling and case.

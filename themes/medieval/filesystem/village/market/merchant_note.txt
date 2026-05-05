@@ -1,0 +1,1 @@
+Try ls --help for more options.

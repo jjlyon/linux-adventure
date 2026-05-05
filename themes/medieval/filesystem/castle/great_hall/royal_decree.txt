@@ -1,0 +1,8 @@
+Use ls to list files here.
+Exact command:
+  ls
+General pattern:
+  ls <directory>
+Then go to tower:
+  cd ../tower
+If lost: pwd. To go home: cd

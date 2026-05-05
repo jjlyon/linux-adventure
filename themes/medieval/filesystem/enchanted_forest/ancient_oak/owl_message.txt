@@ -1,0 +1,4 @@
+Find rune files with:
+  find . -name "rune_fragment_*.txt"
+General pattern:
+  find <where> -name "<pattern>"

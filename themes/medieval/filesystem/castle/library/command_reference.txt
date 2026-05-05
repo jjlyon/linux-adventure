@@ -1,0 +1,18 @@
+cat <filename>
+less <filename>
+ls
+cd <directory>
+pwd
+find . -name "<pattern>"
+grep "<word>" <filename>
+echo "text" > file
+echo "text" >> file
+mkdir <directory>
+cp <source> <dest>
+mv <source> <dest>
+rm <path>
+ls -l
+chmod <mode> <path>
+man <command>
+<command> --help
+history

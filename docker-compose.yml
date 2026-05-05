@@ -1,0 +1,10 @@
+services:
+  shell-quest:
+    build:
+      context: .
+      args:
+        THEME: medieval
+    image: shell-quest
+    hostname: linuxia
+    tty: true
+    stdin_open: true

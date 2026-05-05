@@ -1,0 +1,4 @@
+Count unique family names in census_records.txt.
+You can chain commands with pipes: |.
+Ancient manuals: man sort (press q to quit).
+Save your final number in census_answer.txt.

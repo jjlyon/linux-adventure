@@ -1,0 +1,5 @@
+Create your report in this folder.
+Type exactly:
+  echo "report complete" > my_report.txt
+General pattern:
+  echo "<text>" > <filename>
