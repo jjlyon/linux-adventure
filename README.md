@@ -64,7 +64,7 @@ You can also search your app menu for `Terminal`, `Konsole`, `Console`, or `GNOM
 
 ## Step 2: Install Docker
 
-Docker lets Shell Quest run in a safe, repeatable environment.
+Docker lets Shell Quest run in a safe, repeatable environment. Feel free to learn more about docker [here](https://docs.docker.com/get-started/docker-overview/), but don't worry about understanding it for the purposes of Shell Quest; just know we are using it to isolate your linux learning experience from your normal computer usage.
 
 ### macOS or Windows
 
@@ -98,7 +98,7 @@ If your system requires `sudo` for Docker commands, you can either run the proje
 
 ## Step 3: Install Git
 
-Git downloads the project files from GitHub.
+Git downloads the project files from GitHub. Feel free to learn more about git [here](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F). Similar to docker, it's not important for your experience of Shell Quest, we are just using it to get the files for Shell Quest (that you can see here in GitHub) onto your computer.
 
 ### macOS
 
@@ -148,21 +148,21 @@ In your terminal, go to a place where you keep projects. If you are not sure, yo
 cd ~
 ```
 
-On the GitHub project page:
+Then clone the project by either typing the command below:
+
+```bash
+git clone https://github.com/jjlyon/linux-adventure.git
+```
+
+Or you can construct the command yourself from the GitHub project page (the page you're on now):
 
 1. Click the green **Code** button.
 2. Make sure the **HTTPS** tab is selected.
 3. Copy the URL shown there.
 
-Then clone the project by typing `git clone`, a space, and pasting the URL. It will look similar to this:
+Then typing `git clone`, a space, and pasting the URL (depending on your terminal, simply right clicking will paste the URL from your clipboard). It should look like the command above.
 
-```bash
-git clone https://github.com/someone/linux-adventure.git
-```
-
-The exact URL may be different. Use the one from the green **Code** button on the page you are viewing.
-
-After cloning, enter the project folder:
+After cloning, enter the project folder (you'll learn more about `cd` in Shell Quest):
 
 ```bash
 cd linux-adventure
@@ -170,17 +170,13 @@ cd linux-adventure
 
 ## Step 5: Start the Adventure
 
-Build the Docker image:
+Start Shell Quest with Docker Compose:
 
 ```bash
-make build
+docker compose run --rm shell-quest
 ```
 
-Then start Shell Quest:
-
-```bash
-make run
-```
+This command reads the project's Docker Compose settings, starts the `shell-quest` container, and removes that temporary container when you exit so your computer stays tidy.
 
 You should see a welcome message from the Kingdom of Linuxia. It will ask you to type:
 
@@ -189,17 +185,6 @@ cat welcome_scroll.txt
 ```
 
 Type that command and press Enter. From there, the game will guide you.
-
-## If `make` Is Not Available
-
-Some systems, especially Windows, may not have `make`. You can use Docker Compose directly instead:
-
-```bash
-docker compose build
-docker compose run --rm shell-quest
-```
-
-These commands do the same thing as `make build` and `make run`.
 
 ## How to Leave Shell Quest
 
@@ -211,29 +196,27 @@ exit
 
 Then press Enter. This returns you to your normal terminal.
 
-## Starting Over
+## Guidance Inside Shell Quest
 
-Inside Shell Quest, you can reset your progress with:
+If you have lost sight of your current objective type:
+
+```bash
+quest
+```
+
+If you want to see your overall progress of Shell Quest, type:
+
+```bash
+quest map
+```
+
+You can reset ALL your progress with:
 
 ```bash
 quest reset
 ```
 
 It will ask you to type `YES` before it resets anything.
-
-## Useful Commands Outside the Game
-
-Run tests for the project:
-
-```bash
-make test
-```
-
-Remove the local Docker image:
-
-```bash
-make clean
-```
 
 ## Troubleshooting
 
@@ -251,20 +234,13 @@ On Linux, you may need to run Docker commands with `sudo` or add your user to th
 
 Git is not installed. Install Git using the instructions above, then close and reopen your terminal.
 
-### `make: command not found`
-
-Use the Docker Compose commands instead:
-
-```bash
-docker compose build
-docker compose run --rm shell-quest
-```
-
 ### The terminal looks unfamiliar
 
 That is expected. Shell Quest is designed for first-time terminal users. Read each scroll carefully, type commands exactly as shown at first, and remember that pressing the Tab key can help complete filenames.
 
 ## Project Layout
+
+If you're curious about the Shell Quest project itself and want to poke around here:
 
 - `engine/` contains the scripts that track quests and show progress.
 - `themes/medieval/` contains the Kingdom of Linuxia story, quests, and filesystem.
@@ -274,4 +250,4 @@ That is expected. Shell Quest is designed for first-time terminal users. Read ea
 
 ## Welcome, Traveler
 
-If this is your first time using a terminal, you are exactly who Shell Quest is for. Take your time, read the story files, and experiment. The container is a safe practice realm, and every command you learn here is a real Linux skill you can use later.
+If this is your first time using a terminal, you are exactly who Shell Quest is for. Take your time, read the story files, and experiment. The container is a safe practice realm, and every command you learn here is a real Linux skill you can use later. Other than potentially installing some new tools (git and docker), nothing you do following this guide will impact your computer in any way.
