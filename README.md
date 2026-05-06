@@ -157,7 +157,7 @@ On the GitHub project page:
 Then clone the project by typing `git clone`, a space, and pasting the URL. It will look similar to this:
 
 ```bash
-git clone https://github.com/someone/linux-adventure.git
+git clone https://github.com/jjlyon/linux-adventure.git
 ```
 
 The exact URL may be different. Use the one from the green **Code** button on the page you are viewing.
@@ -170,17 +170,13 @@ cd linux-adventure
 
 ## Step 5: Start the Adventure
 
-Build the Docker image:
+Start Shell Quest with Docker Compose:
 
 ```bash
-make build
+docker compose run --rm shell-quest
 ```
 
-Then start Shell Quest:
-
-```bash
-make run
-```
+This command reads the project's Docker Compose settings, starts the `shell-quest` container, and removes that temporary container when you exit so your computer stays tidy.
 
 You should see a welcome message from the Kingdom of Linuxia. It will ask you to type:
 
@@ -189,17 +185,6 @@ cat welcome_scroll.txt
 ```
 
 Type that command and press Enter. From there, the game will guide you.
-
-## If `make` Is Not Available
-
-Some systems, especially Windows, may not have `make`. You can use Docker Compose directly instead:
-
-```bash
-docker compose build
-docker compose run --rm shell-quest
-```
-
-These commands do the same thing as `make build` and `make run`.
 
 ## How to Leave Shell Quest
 
@@ -226,13 +211,7 @@ It will ask you to type `YES` before it resets anything.
 Run tests for the project:
 
 ```bash
-make test
-```
-
-Remove the local Docker image:
-
-```bash
-make clean
+bash tests/test-conditions.sh
 ```
 
 ## Troubleshooting
@@ -250,15 +229,6 @@ On Linux, you may need to run Docker commands with `sudo` or add your user to th
 ### `git: command not found`
 
 Git is not installed. Install Git using the instructions above, then close and reopen your terminal.
-
-### `make: command not found`
-
-Use the Docker Compose commands instead:
-
-```bash
-docker compose build
-docker compose run --rm shell-quest
-```
 
 ### The terminal looks unfamiliar
 
