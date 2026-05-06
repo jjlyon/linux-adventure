@@ -64,7 +64,7 @@ You can also search your app menu for `Terminal`, `Konsole`, `Console`, or `GNOM
 
 ## Step 2: Install Docker
 
-Docker lets Shell Quest run in a safe, repeatable environment.
+Docker lets Shell Quest run in a safe, repeatable environment. Feel free to learn more about docker [here](https://docs.docker.com/get-started/docker-overview/), but don't worry about understanding it for the purposes of Shell Quest; just know we are using it to isolate your linux learning experience from your normal computer usage.
 
 ### macOS or Windows
 
@@ -98,7 +98,7 @@ If your system requires `sudo` for Docker commands, you can either run the proje
 
 ## Step 3: Install Git
 
-Git downloads the project files from GitHub.
+Git downloads the project files from GitHub. Feel free to learn more about git [here](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F). Similar to docker, it's not important for your experience of Shell Quest, we are just using it to get the files for Shell Quest (that you can see here in GitHub) onto your computer.
 
 ### macOS
 
@@ -148,21 +148,21 @@ In your terminal, go to a place where you keep projects. If you are not sure, yo
 cd ~
 ```
 
-On the GitHub project page:
-
-1. Click the green **Code** button.
-2. Make sure the **HTTPS** tab is selected.
-3. Copy the URL shown there.
-
-Then clone the project by typing `git clone`, a space, and pasting the URL. It will look similar to this:
+Then clone the project by either typing the command below:
 
 ```bash
 git clone https://github.com/jjlyon/linux-adventure.git
 ```
 
-The exact URL may be different. Use the one from the green **Code** button on the page you are viewing.
+Or you can construct the command yourself from the GitHub project page (the page you're on now):
 
-After cloning, enter the project folder:
+1. Click the green **Code** button.
+2. Make sure the **HTTPS** tab is selected.
+3. Copy the URL shown there.
+
+Then typing `git clone`, a space, and pasting the URL (depending on your terminal, simply right clicking will paste the URL from your clipboard). It should look like the command above.
+
+After cloning, enter the project folder (you'll learn more about `cd` in Shell Quest):
 
 ```bash
 cd linux-adventure
@@ -196,23 +196,27 @@ exit
 
 Then press Enter. This returns you to your normal terminal.
 
-## Starting Over
+## Guidance Inside Shell Quest
 
-Inside Shell Quest, you can reset your progress with:
+If you have lost sight of your current objective type:
+
+```bash
+quest
+```
+
+If you want to see your overall progress of Shell Quest, type:
+
+```bash
+quest map
+```
+
+You can reset ALL your progress with:
 
 ```bash
 quest reset
 ```
 
 It will ask you to type `YES` before it resets anything.
-
-## Useful Commands Outside the Game
-
-Run tests for the project:
-
-```bash
-bash tests/test-conditions.sh
-```
 
 ## Troubleshooting
 
@@ -236,6 +240,8 @@ That is expected. Shell Quest is designed for first-time terminal users. Read ea
 
 ## Project Layout
 
+If you're curious about the Shell Quest project itself and want to poke around here:
+
 - `engine/` contains the scripts that track quests and show progress.
 - `themes/medieval/` contains the Kingdom of Linuxia story, quests, and filesystem.
 - `docker/` contains container startup and shell configuration.
@@ -244,4 +250,4 @@ That is expected. Shell Quest is designed for first-time terminal users. Read ea
 
 ## Welcome, Traveler
 
-If this is your first time using a terminal, you are exactly who Shell Quest is for. Take your time, read the story files, and experiment. The container is a safe practice realm, and every command you learn here is a real Linux skill you can use later.
+If this is your first time using a terminal, you are exactly who Shell Quest is for. Take your time, read the story files, and experiment. The container is a safe practice realm, and every command you learn here is a real Linux skill you can use later. Other than potentially installing some new tools (git and docker), nothing you do following this guide will impact your computer in any way.
