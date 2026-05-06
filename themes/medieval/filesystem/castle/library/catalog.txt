@@ -1,0 +1,17 @@
+CASTLE LIBRARY CATALOG
+
+  This library holds the collected knowledge of the realm.
+
+  command_reference.txt -- A reference of useful commands and their patterns
+  navigation_guide.txt  -- A guide to moving about the kingdom and finding your way
+  ancient_tome.txt      -- Lore and secrets of the kingdom
+
+  To read any scroll, use:
+
+    cat <filename>
+
+  For long scrolls, use:
+
+    less <filename>
+
+  Return often; wise travelers keep references close.

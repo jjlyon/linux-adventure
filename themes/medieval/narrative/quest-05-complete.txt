@@ -1,0 +1,29 @@
+
+  ✦ ═══════════════════════════════════════ ✦
+
+  Well done, traveler! Quest 5 is complete.
+
+  Skills learned:
+    mkdir <name>           - create a new directory
+    cp <source> <dest>     - copy a file
+    mv <source> <dest>     - move or rename a file
+    rm <file>              - remove a file (careful -- no undo!)
+
+  Quest Progress: [██████████░░░░░░] 5/8
+
+  Merlin the Wise says:
+
+  The mountain pass is blocked by a sealed gate!
+
+  Some files are protected -- not everyone is allowed to read them.
+
+  Go to the mountain pass:
+
+    cd ~/mountain_pass
+
+  The guard tower has a duty roster that explains how protections work.
+  Start with:
+
+    cd ~/mountain_pass/guard_tower
+
+  Read what you find there.

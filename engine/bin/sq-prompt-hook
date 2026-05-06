@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# NO set -e, NO set -o pipefail -- this runs on every prompt
+
+source "${SQ_ENGINE_DIR}/lib/progress.sh"
+source "${SQ_ENGINE_DIR}/lib/conditions.sh"
+source "${SQ_ENGINE_DIR}/lib/common.sh"
+
+current=$(get_current_quest 2>/dev/null) || exit 0
+[[ "$current" == "done" ]] && exit 0
+
+if check_quest_conditions "$current"; then
+    mark_quest_complete "$current"
+
+    # Show completion narrative
+    local_complete="${SQ_THEME_DIR}/narrative/quest-${current}-complete.txt"
+    [[ -f "$local_complete" ]] && cat "$local_complete"
+
+    next=$(get_current_quest)
+
+    # Special: quest 7 complete -> place sages_challenge.txt in home
+    if [[ "$current" == "07" ]]; then
+        cp "${SQ_THEME_DIR}/narrative/sages_challenge.txt" "$HOME/sages_challenge.txt" 2>/dev/null || true
+    fi
+
+    if [[ "$next" != "done" ]]; then
+        local_intro="${SQ_THEME_DIR}/narrative/quest-${next}-intro.txt"
+        [[ -f "$local_intro" ]] && cat "$local_intro"
+    else
+        local_finale="${SQ_THEME_DIR}/narrative/finale.txt"
+        [[ -f "$local_finale" ]] && cat "$local_finale"
+    fi
+fi

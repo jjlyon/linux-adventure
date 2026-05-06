@@ -1,0 +1,35 @@
+╔═══════════════════════════════════════════════════╗
+║              BY ROYAL DECREE                     ║
+╚═══════════════════════════════════════════════════╝
+
+  From the desk of King Torvalds, guardian of Linuxia:
+
+  Welcome to the castle's great hall, traveler.
+  Look around this hall! Type ls to see what is here.
+
+  The ls command lists all files and folders in your current location.
+  It helps you decide what can be read and where you can go next.
+
+  To travel to another room, use the cd command:
+
+    cd <roomname>
+
+  To go back the way you came:
+
+    cd ..
+
+  The .. means "one level up," like stepping from a room back
+  into the corridor that holds it.
+
+  Lost? Type pwd to see where you are right now.
+
+  The Royal Astronomer in the tower has discovered something urgent.
+  Go to him! From here, type:
+
+    cd ../tower
+
+  General patterns:
+    ls              See what's here
+    cd <folder>     Enter a folder
+    cd ..           Go back one level
+    pwd             Where am I?

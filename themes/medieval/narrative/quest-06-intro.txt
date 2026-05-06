@@ -1,0 +1,17 @@
+  The mountain pass is blocked by a sealed gate.
+
+  First, go to the sealed gate and try to read the lock:
+
+    cd ~/mountain_pass/sealed_gate
+    cat gate_lock.txt
+
+  If you see Permission denied, that is the lesson: the file exists,
+  but you do not have access yet.
+
+  Then visit the guard tower to learn about permissions.
+  The command ls -l shows protection details on files.
+  The duty roster explains how to change protections with chmod,
+  and why this lock requires sudo authority.
+
+  The lock contains an AURUM sigil. Read it, record it, and practice
+  permissions again on the treasure manifest beyond the gate.

@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+source "${SQ_ENGINE_DIR}/lib/common.sh"
+source "${SQ_ENGINE_DIR}/lib/progress.sh"
+
+current=$(get_current_quest)
+
+cat "${SQ_THEME_DIR}/narrative/greeting.txt"
+
+if [[ "$current" != "01" && "$current" != "done" ]]; then
+    printf '
+'
+    progress_bar
+    printf '
+  You were last working on quest %s.
+' "$(quest_number "$current")"
+    printf '  Type %bquest%b to see your current objective.
+
+' "$SQ_BOLD" "$SQ_RESET"
+elif [[ "$current" == "done" ]]; then
+    printf '
+'
+    progress_bar
+    printf '
+  You have completed all quests! Well done, adventurer!
+
+'
+fi
