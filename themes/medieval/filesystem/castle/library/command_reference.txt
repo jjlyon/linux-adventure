@@ -1,0 +1,69 @@
+═══════════════════════════════════════════════════
+         THE COMMAND REFERENCE SCROLL
+═══════════════════════════════════════════════════
+
+  This scroll records the most useful commands
+  known to the scholars of Linuxia.
+
+  ─── READING FILES ──────────────────────────
+
+    cat <filename>           Show a file's contents
+    less <filename>          Read a long file page by page
+                             (SPACE=next page, b=back, q=quit)
+
+  ─── LOOKING AROUND ────────────────────────
+
+    ls                       List files and folders here
+    ls -l                    Detailed list (permissions, size, date)
+    ls -a                    Show hidden files too
+    ls <directory>           List what's inside a specific folder
+
+  ─── MOVING AROUND ─────────────────────────
+
+    cd <directory>           Go into a folder
+    cd ..                    Go back one level (parent folder)
+    cd                       Go back to your home (cottage)
+    cd ~/<path>              Go to a path starting from home
+    pwd                      Show where you are right now
+
+  ─── WRITING ───────────────────────────────
+
+    echo "text" > <file>     Write text to file (OVERWRITES!)
+    echo "text" >> <file>    Add text to end of file (keeps existing)
+
+  ─── SEARCHING ─────────────────────────────
+
+    find <where> -name "<pattern>"
+                             Find files by name
+    grep "<word>" <file>     Search for a word inside a file
+    grep -r "<word>" <dir>   Search all files in a directory
+
+  ─── FILE OPERATIONS ───────────────────────
+
+    mkdir <name>             Create a new folder
+    cp <source> <dest>       Copy a file
+    mv <source> <dest>       Move or rename a file
+    rm <file>                Remove a file (cannot be undone!)
+
+  ─── PERMISSIONS ───────────────────────────
+
+    ls -l                    See permissions (rwx) on files
+    chmod <mode> <file>      Change permissions on a file
+    sudo <command>           Run command with special authority
+
+  ─── COMBINING COMMANDS ────────────────────
+
+    command1 | command2      Pipe: pass output of one into another
+    cut -d, -f2 <file>       Extract field 2 using comma as divider
+    sort <file>              Sort lines alphabetically
+    uniq                     Remove duplicate adjacent lines
+    wc -l                    Count number of lines
+
+  ─── GETTING HELP ──────────────────────────
+
+    man <command>            Read the full manual for a command
+                             (if installed on this system)
+    <command> --help         Quick help summary from the command itself
+    history                  Show commands you have typed before
+
+═══════════════════════════════════════════════════

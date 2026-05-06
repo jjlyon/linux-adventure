@@ -1,0 +1,16 @@
+TREASURE VAULT MANIFEST
+
+  This manifest was locked so new guards could practice permissions
+  on a second file after opening the gate.
+
+  Gold coins: 10,000, counted by three very tired clerks.
+  Enchanted gems: 47, humming in polite harmony.
+  Dragon eggs: 3 (do NOT touch).
+  Crown polish: 12 bottles, lemon scented.
+  Cloaks of dramatic entrance: 5, one missing a clasp.
+  Emergency biscuits: 200, guarded more fiercely than gold.
+  Silver pipes: 9, purely decorative despite the name.
+  Thank-you medals for persistent travelers: unlimited.
+
+  If you can read this, you practiced chmod twice and handled
+  protected files with care. Well done.

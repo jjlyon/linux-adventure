@@ -1,0 +1,21 @@
+A FAIRY NOTE WRITTEN IN SILVER INK
+
+  Dear tall traveler,
+
+  We fairies hide words inside our writings. It is excellent fun
+  until someone forgets which blossom holds the message.
+
+  To find a hidden word, try:
+
+    grep "RUNE" <filename>
+
+  Replace <filename> with the file you want to search.
+  The word you seek will be revealed if it appears in that file!
+
+  You can also search many writings from a directory with:
+
+    grep -r "RUNE" .
+
+  The dot means here. The -r means all the little rooms beneath here too.
+
+  Please do not step on the mushrooms. They are unionized.

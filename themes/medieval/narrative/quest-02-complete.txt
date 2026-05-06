@@ -1,0 +1,28 @@
+
+  ✦ ═══════════════════════════════════════ ✦
+
+  Well done, traveler! Quest 2 is complete.
+
+  Skills learned:
+    ls                   - list files and folders here
+    ls <directory>       - list contents of a specific folder
+    cd <folder>          - enter a folder
+    cd ..                - go back one level
+    cd                   - return to your cottage (home)
+    pwd                  - show where you are
+
+  Quest Progress: [████░░░░░░░░░░░░] 2/8
+
+  Merlin the Wise says:
+
+  Ancient runes have been scattered across the Enchanted Forest!
+  The forest is vast with many nested paths. Searching folder by folder would take ages.
+
+  Enter the forest from your cottage with:
+
+    cd ~/enchanted_forest
+
+  The ~/ part means "start from my home directory."
+  An old owl in the ancient oak is said to know powerful search magic.
+
+  Start by exploring: ls enchanted_forest or cd enchanted_forest

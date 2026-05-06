@@ -1,0 +1,50 @@
+GUARD TOWER DUTY ROSTER AND SECURITY PROTOCOLS
+
+  Captain's note: every recruit should first try the gate lock
+  before asking the tower for help. If you have not done so yet,
+  go to the sealed gate and try:
+
+    cat gate_lock.txt
+
+  When the shell says "Permission denied," return here. That message
+  means the file exists, but its protections do not let you read it.
+
+  To inspect the protections on a file, use:
+
+    ls -l <filename>
+
+  You'll see something like: -rwxrw-r-- which shows
+  who can do what:
+    r = read (view the file)
+    w = write (change the file)
+    x = execute (run the file as a program)
+
+  The first rwx is for the owner, the next for the
+  group, the last for everyone else.
+
+  The sealed gate's lock file has no permissions set.
+  No one can read it until the protections are changed.
+
+  To change permissions, use chmod. Since the gate file
+  is specially protected, you need sudo (special authority):
+
+    sudo chmod a+r <filepath>
+
+  This adds read permission for all users.
+
+  Try this on the gate lock:
+
+    sudo chmod a+r ~/mountain_pass/sealed_gate/gate_lock.txt
+
+  After chmod, read the lock with cat. It contains a sigil word.
+  Record that sigil in the sealed_gate directory with echo, following
+  the instructions written inside the lock.
+
+  The treasure manifest beyond the gate is locked the same way, so
+  practice the same permission change on this second file:
+
+    sudo chmod a+r ~/mountain_pass/treasure_vault/treasure_manifest.txt
+
+  From here, go to the sealed gate:
+
+    cd ../sealed_gate

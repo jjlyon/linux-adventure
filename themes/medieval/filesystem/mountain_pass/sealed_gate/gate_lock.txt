@@ -1,0 +1,16 @@
+═══════════════════════════════════
+  THE GATE IS UNLOCKED!
+
+  The ancient sigil glows: AURUM
+
+  To prove you truly read the lock,
+  record the sigil in this room:
+
+    echo "AURUM" > sigil_report.txt
+
+  Beyond the gate lies a treasure vault,
+  but its manifest is locked too.
+  Use the same chmod pattern again on:
+
+    ~/mountain_pass/treasure_vault/treasure_manifest.txt
+═══════════════════════════════════

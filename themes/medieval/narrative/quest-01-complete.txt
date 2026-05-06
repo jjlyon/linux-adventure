@@ -1,0 +1,32 @@
+
+  ✦ ═══════════════════════════════════════ ✦
+
+  Well done, traveler! Quest 1 is complete.
+
+  Skills learned:
+    cat <file>           - display a file's contents
+    less <file>          - read a long file page by page
+    echo "..." > <file>  - write text to a file
+
+  Quest Progress: [██░░░░░░░░░░░░░░] 1/8
+
+  Merlin the Wise says:
+
+  A royal summons has arrived from the castle!
+
+  First, see what is around you. Type:
+
+    ls
+
+  This lists all the files and folders in your current location.
+  Folders, also called directories, are like rooms -- you can go inside them.
+
+  To enter a folder, type:
+
+    cd <foldername>
+
+  You should see a folder called 'castle'. Enter it with:
+
+    cd castle
+
+  Then use ls again to look around inside!

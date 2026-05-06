@@ -1,0 +1,12 @@
+  The village has sent word for a scribe.
+
+  Post a notice by creating:
+
+    ~/village/notice_board/quest_notice.txt
+
+  Then sign the tavern guest book by appending one new line to:
+
+    ~/village/tavern/guest_book.txt
+
+  Remember: > creates or overwrites, while >> appends.
+  Head to cd ~/village/notice_board and read the instructions there.

@@ -1,0 +1,38 @@
+═══════════════════════════════════════════════════
+            THE SAGE'S FINAL CHALLENGE
+═══════════════════════════════════════════════════
+
+  I am Sage Elara, keeper of questions no map can answer.
+  Merlin has taught you many commands. Now you must prove
+  you can discover knowledge for yourself.
+
+  The command man <command> opens the full manual for any
+  command. Navigate man pages just like less:
+    SPACEBAR  next page
+    b         back one page
+    q         quit
+
+  The shorter form <command> --help often shows a quick summary.
+  Try man ls right now to see the manual for ls, or try:
+
+    ls --help
+
+  Answer these three questions:
+
+  1. What single-character flag for ls shows hidden files,
+     meaning files whose names begin with a dot?
+
+  2. What flag for sort sorts in reverse order?
+
+  3. What command shows the list of commands you have previously typed?
+
+  Write your three answers into a file called sages_answers.txt
+  in your home directory. Your format may be your own, but this
+  example shows one way:
+
+    echo "1: first answer
+2: second answer
+3: third answer" > ~/sages_answers.txt
+
+  Seek the manuals, trust your notes, and finish the path.
+═══════════════════════════════════════════════════
