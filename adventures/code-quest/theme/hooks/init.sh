@@ -2,7 +2,7 @@
 : "${QE_PROJECT_DIR:=$HOME/project}"
 
 if [[ ! -f "$QE_PROJECT_DIR/package.json" ]]; then
-    cp -a "$QE_THEME_DIR/project/." "$QE_PROJECT_DIR/"
+    cp -R "$QE_THEME_DIR/project/." "$QE_PROJECT_DIR/"
 fi
 
 if [[ ! -d "$QE_PROJECT_DIR/node_modules" ]]; then
