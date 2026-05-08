@@ -3,7 +3,7 @@
 build:
 	docker compose build
 
-run:
+run: build
 	docker compose run --rm code-quest
 
 test:
