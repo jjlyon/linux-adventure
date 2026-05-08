@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     sudo \
     && rm -rf /var/lib/apt/lists/*
 
-RUN useradd -m -s /bin/bash traveler
+RUN usermod -l traveler -d /home/traveler -m -s /bin/bash node \
+    && groupmod -n traveler node
 
 COPY engine/ /opt/quest-engine/engine/
 COPY adventures/code-quest/theme/ /opt/quest-engine/theme/
