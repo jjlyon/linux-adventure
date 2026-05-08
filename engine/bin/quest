@@ -1,105 +1,62 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-source "${SQ_ENGINE_DIR}/lib/progress.sh"
-source "${SQ_ENGINE_DIR}/lib/common.sh"
+source "${QE_ENGINE_DIR}/lib/progress.sh"
+source "${QE_ENGINE_DIR}/lib/common.sh"
 
 current=$(get_current_quest)
 
 case "${1:-status}" in
     status)
         if [[ "$current" == "done" ]]; then
-            printf '
-  All quests complete! You are a true Shell Knight.
-'
+            printf '\n  All quests complete! You are a true champion.\n'
             progress_bar
-            printf '
-'
+            printf '\n'
         else
-            source "${SQ_THEME_DIR}/quests/quest-${current}.conf"
-            printf '
-'
+            source "${QE_THEME_DIR}/quests/quest-${current}.conf"
+            printf '\n'
             progress_bar
-            printf '
-  %bCurrent Quest:%b %s - %s
-
-' "$SQ_BOLD" "$SQ_RESET" "$(quest_number "$current")" "$QUEST_TITLE"
-            cat "${SQ_THEME_DIR}/narrative/quest-${current}-intro.txt"
+            printf '\n  %bCurrent Quest:%b %s - %s\n\n' "$QE_BOLD" "$QE_RESET" "$(quest_number "$current")" "$QUEST_TITLE"
+            cat "${QE_THEME_DIR}/narrative/quest-${current}-intro.txt"
         fi
         ;;
     map)
-        printf '
-  %b═══ QUEST MAP ═══%b
-
-' "$SQ_BOLD" "$SQ_RESET"
-        for i in 01 02 03 04 05 06 07 08; do
-            source "${SQ_THEME_DIR}/quests/quest-${i}.conf"
-            if [[ "$current" == "done" ]] || [[ "10#$i" -lt "10#$current" ]]; then
-                printf '  %b[✓]%b Quest %s: %s
-' "$SQ_GREEN" "$SQ_RESET" "$((10#$i))" "$QUEST_TITLE"
+        printf '\n  %b═══ QUEST MAP ═══%b\n\n' "$QE_BOLD" "$QE_RESET"
+        current_num=0
+        [[ "$current" != "done" ]] && current_num=$((10#$current))
+        for ((n=1; n<=${TOTAL_QUESTS:-8}; n++)); do
+            i=$(printf '%02d' "$n")
+            source "${QE_THEME_DIR}/quests/quest-${i}.conf"
+            if [[ "$current" == "done" ]] || [[ "$n" -lt "$current_num" ]]; then
+                printf '  %b[✓]%b Quest %s: %s\n' "$QE_GREEN" "$QE_RESET" "$n" "$QUEST_TITLE"
             elif [[ "$i" == "$current" ]]; then
-                printf '  %b[>]%b Quest %s: %s  %b(current)%b
-' "$SQ_YELLOW" "$SQ_RESET" "$((10#$i))" "$QUEST_TITLE" "$SQ_YELLOW" "$SQ_RESET"
+                printf '  %b[>]%b Quest %s: %s  %b(current)%b\n' "$QE_YELLOW" "$QE_RESET" "$n" "$QUEST_TITLE" "$QE_YELLOW" "$QE_RESET"
             else
-                printf '  [ ] Quest %s: %s
-' "$((10#$i))" "$QUEST_TITLE"
+                printf '  [ ] Quest %s: %s\n' "$n" "$QUEST_TITLE"
             fi
         done
-        printf '
-'
+        printf '\n'
         progress_bar
-        printf '
-'
+        printf '\n'
         ;;
     reset)
-        printf '  This will reset all progress and restore the original files.
-'
+        printf '  This will reset all progress and restore the original files.\n'
         printf '  Are you sure? Type YES to confirm: '
         read -r confirm
         if [[ "$confirm" == "YES" ]]; then
-            # Remove quest-created files, but do not remove the directory tree.
-            # The user's interactive shell may currently be inside one of these
-            # directories; deleting it would leave bash in a missing cwd and
-            # produce getcwd/job-control errors after reset completes.
-            rm -f "$HOME"/{travelers_log.txt,sages_challenge.txt,sages_answers.txt}
-            rm -f "$HOME/castle/tower/my_report.txt"
-            rm -f "$HOME/enchanted_forest/combined_runes.txt"
-            rm -f "$HOME/village/notice_board/quest_notice.txt"
-            rm -f "$HOME/village/blacksmith/completed/orders.txt"
-            rm -f "$HOME/archives/census_answer.txt"
-            rm -f "$HOME/mountain_pass/sealed_gate/gate_lock.txt"
-            rm -f "$HOME/mountain_pass/sealed_gate/sigil_report.txt"
-            rm -f "$HOME/mountain_pass/treasure_vault/treasure_manifest.txt"
-
-            current_pwd="${PWD:-}"
-            completed_dir="$HOME/village/blacksmith/completed"
-            case "$current_pwd" in
-                "$completed_dir"|"$completed_dir"/*)
-                    ;;
-                *)
-                    rm -rf "$completed_dir"
-                    ;;
-            esac
-
-            cp -a "$SQ_THEME_DIR/filesystem/." "$HOME/"
-            chmod 000 "$HOME/mountain_pass/sealed_gate/gate_lock.txt" 2>/dev/null || true
-            chmod 000 "$HOME/mountain_pass/treasure_vault/treasure_manifest.txt" 2>/dev/null || true
+            if [[ -f "$QE_THEME_DIR/hooks/reset.sh" ]]; then
+                source "$QE_THEME_DIR/hooks/reset.sh"
+            fi
             set_current_quest 01
-            printf '  Reset complete. Type quest to see your first objective.
-'
+            printf '  Reset complete. Type quest to see your first objective.\n'
         else
-            printf '  Reset cancelled.
-'
+            printf '  Reset cancelled.\n'
         fi
         ;;
     *)
-        printf 'Usage: quest [map|reset]
-'
-        printf '  quest        Show current objective
-'
-        printf '  quest map    Show all quests and progress
-'
-        printf '  quest reset  Start over from the beginning
-'
+        printf 'Usage: quest [map|reset]\n'
+        printf '  quest        Show current objective\n'
+        printf '  quest map    Show all quests and progress\n'
+        printf '  quest reset  Start over from the beginning\n'
         ;;
 esac

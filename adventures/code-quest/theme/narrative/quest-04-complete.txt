@@ -1,0 +1,47 @@
+Quest Progress: [████████░░░░░░░░] 4/8
+
+Excellent craft. Your Chronicle is no longer one crowded scroll; it can
+be divided into reusable components.
+
+You learned that a component can be imported, then placed in a template
+with a tag like `<PageHeader />`. Capital letters help Vue recognize it
+as your component rather than ordinary HTML.
+
+So far your page is static — the same every time. Let's make it come
+alive!
+
+Reactive data is data the page watches — when it changes, the page
+updates automatically.
+
+`ref()` creates reactive data. `{{ }}` displays reactive data in
+templates. The curly braces mean, "show the value of this JavaScript
+thing here."
+
+In `<script setup>`, import `ref` from Vue before using it.
+
+```vue
+    <script setup>
+    import { ref } from 'vue'
+
+    const visitorCount = ref(0)
+    const kingdomName = ref('Linuxia')
+    </script>
+
+    <template>
+      <p>Welcome to {{ kingdomName }}!</p>
+      <p>Visitors so far: {{ visitorCount }}</p>
+      <button @click="visitorCount++">I have visited!</button>
+    </template>
+```
+
+In `<script setup>`, `ref(0)` creates a reactive value starting at 0. In
+the template, `{{ visitorCount }}` shows its current value. When it
+changes, the page updates instantly.
+
+The line `const kingdomName = ref('Linuxia')` creates a reactive text
+value. The quotes mean the value is text, called a string in JavaScript.
+
+The `@click` part is a preview of events. Quest 6 goes deeper into
+buttons and forms.
+
+Add `ref(` to any `.vue` file to complete this quest.

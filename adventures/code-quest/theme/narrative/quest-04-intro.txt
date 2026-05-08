@@ -1,0 +1,14 @@
+The Chronicle asks for its first separate building block.
+
+Create a component file in `project/src/components/`.
+
+For example, create `project/src/components/PageHeader.vue`.
+
+Give the file this structure: `<script setup>`, then `<template>`, then
+`<style scoped>`.
+
+You may use the PageHeader pattern from the last lesson, or invent a
+place card, warning banner, or footer.
+
+For this quest, creating any `.vue` file in `src/components/` is enough.
+Save it, then return to the terminal.

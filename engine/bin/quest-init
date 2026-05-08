@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+: "${QE_THEME_DIR:=/opt/quest-engine/theme}"
+: "${QE_STATE_FILE:=$HOME/.quest-engine/state}"
+
+if [[ -f "$QE_STATE_FILE" ]]; then
+    exit 0
+fi
+
+if [[ -f "$QE_THEME_DIR/hooks/init.sh" ]]; then
+    source "$QE_THEME_DIR/hooks/init.sh"
+fi
+
+mkdir -p "$(dirname "$QE_STATE_FILE")"
+printf 'CURRENT_QUEST=01\n' > "$QE_STATE_FILE"

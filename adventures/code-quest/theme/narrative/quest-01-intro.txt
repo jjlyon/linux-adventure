@@ -1,0 +1,14 @@
+Aldric unrolls a blank sheet beside the glowing browser.
+
+Your first task is to explore the project and make your first edit.
+
+  ls project/src/
+
+Use that command to see the project files. Then read the main file:
+
+  cat project/src/App.vue
+
+Notice the three sections: `<template>`, `<script setup>`, and
+`<style scoped>`. Open `project/src/App.vue` in your editor and change
+the content. Remove the starter marker and write something of your own.
+Save the file and check your browser at http://localhost:5173.

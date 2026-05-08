@@ -1,0 +1,12 @@
+The first ink has dried. Now give your Chronicle a clear structure.
+
+Work in `project/src/App.vue`, in the `<template>` section.
+
+Use the tags Aldric showed you: `<h1>` for the main title, `<h2>` for a
+section title, `<p>` for paragraphs, and a list for places in Linuxia.
+
+A bullet list begins with `<ul>`, and each item inside it is wrapped in
+`<li>` and `</li>`.
+
+Add a list of locations to complete this quest. Save the file, then look
+at http://localhost:5173.

@@ -1,0 +1,51 @@
+Quest Progress: [██████████░░░░░░] 5/8
+
+The Chronicle now holds living values. You have learned `ref()`, `{{ }}`,
+reactivity, and the use of `<script setup>`.
+
+A living value is useful; a listening page is better. Now we invite the
+visitor to act.
+
+`@click="expression"` runs JavaScript when clicked. It belongs on a
+button or another clickable element.
+
+`v-model="ref"` creates two-way binding between input and reactive data.
+Two-way means the input changes the ref, and the ref can also update the
+input.
+
+Complete example, a guest book form:
+
+```vue
+    <script setup>
+    import { ref } from 'vue'
+
+    const guestName = ref('')
+    const message = ref('')
+    const entries = ref([])
+
+    function addEntry() {
+      entries.value.push({ name: guestName.value, text: message.value })
+      guestName.value = ''
+      message.value = ''
+    }
+    </script>
+
+    <template>
+      <h2>Guest Book</h2>
+      <input v-model="guestName" placeholder="Your name" />
+      <input v-model="message" placeholder="Your message" />
+      <button @click="addEntry">Sign the Book</button>
+    </template>
+```
+
+`v-model` listens as the visitor types and stores the text in a ref.
+`@click` waits for one moment: the button click. In this example, the
+click runs `addEntry`.
+
+The `<input>` HTML element is a small box where a visitor can type. The
+`placeholder` attribute shows hint text before anything has been typed.
+
+The empty quotes `''` mean an empty text value. The empty brackets `[]`
+mean an empty array, a list waiting to hold entries.
+
+Add `v-model` to any `.vue` file to complete this quest.

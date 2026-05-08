@@ -1,32 +1,32 @@
 #!/usr/bin/env bash
-SQ_STATE_FILE="${SQ_STATE_FILE:-$HOME/.shell-quest/state}"
+QE_STATE_FILE="${QE_STATE_FILE:-$HOME/.quest-engine/state}"
 
 ensure_state() {
-    mkdir -p "$(dirname "$SQ_STATE_FILE")"
-    if [[ ! -f "$SQ_STATE_FILE" ]]; then
-        printf 'CURRENT_QUEST=01
-' > "$SQ_STATE_FILE"
+    mkdir -p "$(dirname "$QE_STATE_FILE")"
+    if [[ ! -f "$QE_STATE_FILE" ]]; then
+        printf 'CURRENT_QUEST=01\n' > "$QE_STATE_FILE"
     fi
 }
 
 get_current_quest() {
     ensure_state
-    source "$SQ_STATE_FILE"
+    source "$QE_STATE_FILE"
     echo "$CURRENT_QUEST"
 }
 
 set_current_quest() {
     ensure_state
-    printf 'CURRENT_QUEST=%s
-' "$1" > "$SQ_STATE_FILE"
+    printf 'CURRENT_QUEST=%s\n' "$1" > "$QE_STATE_FILE"
 }
 
 next_quest() {
-    case "$1" in
-        01) echo 02 ;; 02) echo 03 ;; 03) echo 04 ;; 04) echo 05 ;;
-        05) echo 06 ;; 06) echo 07 ;; 07) echo 08 ;; 08) echo done ;;
-        *) echo done ;;
-    esac
+    local total=${TOTAL_QUESTS:-8}
+    local num=$((10#$1))
+    if [[ $num -ge $total ]]; then
+        echo done
+    else
+        printf '%02d' $((num + 1))
+    fi
 }
 
 mark_quest_complete() {
@@ -34,26 +34,26 @@ mark_quest_complete() {
 }
 
 quest_number() {
-    # Convert quest ID like "03" to plain number 3 for display
     echo $((10#$1))
 }
 
 completed_count() {
+    local total=${TOTAL_QUESTS:-8}
     local current
     current=$(get_current_quest)
     if [[ "$current" == "done" ]]; then
-        echo 8
+        echo "$total"
     else
         echo $(( 10#$current - 1 ))
     fi
 }
 
 progress_bar() {
+    local total=${TOTAL_QUESTS:-8}
     local done
     done=$(completed_count)
     local bar=""
     for ((i=1; i<=done; i++)); do bar+="██"; done
-    for ((i=done+1; i<=8; i++)); do bar+="░░"; done
-    printf '  Quest Progress: [%s] %s/8
-' "$bar" "$done"
+    for ((i=done+1; i<=total; i++)); do bar+="░░"; done
+    printf '  Quest Progress: [%s] %s/%s\n' "$bar" "$done" "$total"
 }

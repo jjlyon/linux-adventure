@@ -1,0 +1,43 @@
+Quest Progress: [██░░░░░░░░░░░░░░] 1/8
+
+Well struck, apprentice of the living page! You have edited a Vue file
+and watched the browser change without restarting the server.
+
+You have seen that a `.vue` file is a single component with three rooms:
+
+  <script setup>   JavaScript lives here.
+  <template>       Visible page structure lives here.
+  <style scoped>   This component's CSS lives here.
+
+The dev server was started with `npm run dev`. It watches your files,
+then reloads the page when you save. That watching is why your browser
+seems enchanted.
+
+Now we learn HTML, the skeleton of every web page.
+
+HTML uses **tags** — pairs of markers that wrap content. An opening tag
+starts the thing, and a closing tag ends it. The slash means "close".
+
+    <h1>The Chronicle of Linuxia</h1>     Main heading
+    <h2>Places of Interest</h2>           Sub-heading
+    <p>The kingdom stretches far...</p>   Paragraph
+    <ul>                                   Bullet list
+      <li>The Castle</li>
+      <li>The Enchanted Forest</li>
+    </ul>
+    <a href="https://vuejs.org">Vue Docs</a>   Link
+    <strong>bold text</strong>             Bold
+    <em>italic text</em>                  Italic
+
+`h1` means the largest heading. `p` means paragraph. `ul` means
+unordered list, and each `li` is one list item. The `href` attribute on
+an `a` tag tells the link where to go.
+
+Build a Chronicle page about the Kingdom. Include a heading, some
+paragraphs, and a list of locations.
+
+All HTML goes inside the `<template>` section of App.vue, inside a
+`<div>`. Keep the `<script setup>` and `<style scoped>` sections in
+place, even when they are mostly empty.
+
+When your page contains list items, the next seal will open.

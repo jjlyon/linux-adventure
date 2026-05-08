@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# NO set -e -- this runs on every prompt
+
+source "${QE_ENGINE_DIR}/lib/progress.sh"
+source "${QE_ENGINE_DIR}/lib/conditions.sh"
+source "${QE_ENGINE_DIR}/lib/common.sh"
+
+current=$(get_current_quest 2>/dev/null) || exit 0
+[[ "$current" == "done" ]] && exit 0
+
+if check_quest_conditions "$current"; then
+    mark_quest_complete "$current"
+
+    local_complete="${QE_THEME_DIR}/narrative/quest-${current}-complete.txt"
+    [[ -f "$local_complete" ]] && cat "$local_complete"
+
+    if [[ -x "$QE_THEME_DIR/hooks/on-complete.sh" ]]; then
+        "$QE_THEME_DIR/hooks/on-complete.sh" "$current" 2>/dev/null || true
+    fi
+
+    next=$(get_current_quest)
+
+    if [[ "$next" != "done" ]]; then
+        local_intro="${QE_THEME_DIR}/narrative/quest-${next}-intro.txt"
+        [[ -f "$local_intro" ]] && cat "$local_intro"
+    else
+        local_finale="${QE_THEME_DIR}/narrative/finale.txt"
+        [[ -f "$local_finale" ]] && cat "$local_finale"
+    fi
+fi

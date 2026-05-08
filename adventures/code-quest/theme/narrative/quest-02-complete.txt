@@ -1,0 +1,48 @@
+Quest Progress: [████░░░░░░░░░░░░] 2/8
+
+Your Chronicle now has bones and order. You have used HTML tags such as
+`h1`, `h2`, `p`, `ul`, `ol`, `li`, `a`, `img`, `div`, `strong`, and
+`em`. These tags tell the browser what each piece of content means.
+
+A page with only structure is useful, but a kingdom deserves color,
+spacing, and flourish. That is the duty of CSS.
+
+CSS controls how things look — colors, spacing, borders, fonts.
+
+CSS goes in the `<style scoped>` section of your .vue file. The word
+`scoped` means styles only affect THIS component, not every component in
+the whole site.
+
+```css
+    h1 {
+      color: #8b4513;
+      text-align: center;
+    }
+
+    .page {
+      background-color: #fdf6e3;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    ul {
+      border: 1px solid #d4a574;
+      border-radius: 8px;
+      padding: 1rem 2rem;
+    }
+```
+
+`color` changes text color. `text-align: center` centers text.
+`background-color` paints the area behind an element. `padding` creates
+space inside the edge of a box. `max-width` prevents a block from
+becoming too wide. `margin: 0 auto` centers that block. `border` draws a
+line around an element, and `border-radius` rounds the corners.
+
+A selector names what you want to style. `h1` styles every h1 in this
+component. `.page` styles anything with `class="page"`. `ul` styles
+bullet lists.
+
+Add some styles to the `<style scoped>` section of App.vue. A single
+`background-color`, `border`, or `color:` will show Aldric your banner
+is ready for paint.
