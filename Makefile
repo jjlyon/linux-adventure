@@ -1,13 +1,11 @@
-.PHONY: build run test clean
+.PHONY: shell-quest code-quest build-all
 
-build:
-	docker compose build
+shell-quest:
+	cd adventures/shell-quest && $(MAKE) run
 
-run:
-	docker compose run --rm shell-quest
+code-quest:
+	cd adventures/code-quest && $(MAKE) run
 
-test:
-	bash tests/test-conditions.sh
-
-clean:
-	docker rmi shell-quest 2>/dev/null || true
+build-all:
+	cd adventures/shell-quest && $(MAKE) build
+	cd adventures/code-quest && $(MAKE) build

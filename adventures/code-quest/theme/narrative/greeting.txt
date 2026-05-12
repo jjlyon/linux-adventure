@@ -1,0 +1,42 @@
+╔════════════════════════════════════════════════════════════╗
+║              THE CHRONICLE OF LINUXIA OPENS              ║
+╚════════════════════════════════════════════════════════════╝
+
+Greetings, brave traveler. I am Aldric the Chronicler, keeper of ink,
+lamp, and living page.
+
+You have mastered the ways of the command line. Now the Kingdom needs
+something new — a Chronicle, a living record that anyone in the realm
+can read through their scrying glass (a web browser).
+
+A website is a collection of pages with text, images, colors, and
+interactive features. Some pages simply tell a tale. Others listen,
+respond, count, sort, and guide visitors from place to place.
+
+We will use Vue — a tool for building websites. There are others
+(React, Angular) but Vue's style is closest to the language of the web
+itself. The skills you learn here work everywhere.
+
+Your project is in the `project/` folder. Open this folder in your code
+editor (like VS Code) on your machine. The terminal remains your quest
+compass, but your editor is now your quill.
+
+The Chronicle is already live! Open your web browser and visit:
+
+  http://localhost:5173
+
+When a file is saved, the browser refreshes as if by helpful magic.
+This is called live reloading.
+
+First, explore the project. In your terminal, type:
+
+  ls project/src/
+
+Then read the main file:
+
+  cat project/src/App.vue
+
+When you're ready, open `project/src/App.vue` in your editor and make
+it your own!
+
+Type `quest` at any time to hear your current charge again.

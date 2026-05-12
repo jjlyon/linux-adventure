@@ -1,0 +1,15 @@
+It is time to wake the page.
+
+Open any `.vue` file in `project/src/`.
+
+Inside `<script setup>`, add `import { ref } from 'vue'`.
+
+Then create reactive data, such as `const visitorCount = ref(0)` or
+`const kingdomName = ref('Linuxia')`.
+
+Inside `<template>`, display the value with double curly braces:
+`{{ visitorCount }}` or `{{ kingdomName }}`.
+
+Save the file and watch the browser.
+
+Add `ref(` to any `.vue` file to complete this quest.

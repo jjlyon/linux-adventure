@@ -1,0 +1,61 @@
+Quest Progress: [██████░░░░░░░░░░] 3/8
+
+Your page now wears color and shape. You have learned CSS properties,
+selectors, and the purpose of `<style scoped>`.
+
+A single page can grow crowded. Vue gives us a stronger craft:
+components.
+
+A component is a self-contained piece of your page with its own HTML,
+CSS, and JavaScript.
+
+Components keep files small and let you reuse pieces. A header, a place
+card, a guest book, or a navigation bar can each live in its own file.
+
+To create one, follow these steps:
+
+  1. Create a new `.vue` file in `src/components/` (e.g., `PageHeader.vue`)
+  2. Give it `<template>`, `<script setup>`, and `<style scoped>` sections
+  3. Import it in App.vue: `import PageHeader from './components/PageHeader.vue'`
+  4. Use it in the template: `<PageHeader />`
+
+Complete example component:
+
+```vue
+    <script setup>
+    </script>
+
+    <template>
+      <header class="page-header">
+        <h1>The Chronicle of Linuxia</h1>
+        <p>A record of the realm's history and wonders</p>
+      </header>
+    </template>
+
+    <style scoped>
+    .page-header {
+      text-align: center;
+      padding: 2rem;
+      background-color: #5b3a29;
+      color: #fdf6e3;
+    }
+    </style>
+```
+
+Show how App.vue imports and uses it:
+
+```vue
+    <script setup>
+    import PageHeader from './components/PageHeader.vue'
+    </script>
+
+    <template>
+      <div class="page">
+        <PageHeader />
+        <!-- rest of your content -->
+      </div>
+    </template>
+```
+
+Create any `.vue` file inside `src/components/` to prove you can split
+the Chronicle into building blocks.

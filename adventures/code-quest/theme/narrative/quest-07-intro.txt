@@ -1,0 +1,13 @@
+The realm has many places, records, and people. Show them as a list.
+
+Use `v-for` to repeat HTML for each item in an array.
+
+Use `:key` to give each repeated item a stable identity.
+
+Use `v-if` and `v-else` when some items need different text.
+
+The Kingdom Directory example from Aldric's last lesson is your pattern.
+
+Try making a list of locations, heroes, books, or messages.
+
+Add `v-for` to any `.vue` file to complete this quest.

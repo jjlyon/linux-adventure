@@ -1,0 +1,13 @@
+Now take up the pigments of the web: CSS.
+
+Open `project/src/App.vue` and look for `<style scoped>` near the bottom.
+That is where visual rules belong.
+
+Try changing text color with `color: #8b4513;` or adding a page
+background with `background-color: #fdf6e3;`.
+
+Try a border such as `border: 1px solid #d4a574;` around a list or card.
+
+Save the file and refresh your gaze at http://localhost:5173.
+
+Add `background-color`, `border`, or `color:` to complete this quest.

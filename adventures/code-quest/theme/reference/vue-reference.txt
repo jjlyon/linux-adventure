@@ -1,0 +1,105 @@
+═══════════════════════════════════════════════════
+         THE VUE REFERENCE SCROLL
+═══════════════════════════════════════════════════
+
+  This scroll records the knowledge needed to
+  build with Vue. Refer to it at any time.
+
+  ─── VUE FILE STRUCTURE ─────────────────────
+
+  A .vue file has three sections:
+
+    <script setup>
+      JavaScript code goes here
+    </script>
+
+    <template>
+      HTML goes here (what the user sees)
+    </template>
+
+    <style scoped>
+      CSS goes here (how it looks)
+    </style>
+
+  ─── HTML BASICS ────────────────────────────
+
+    <h1>Big heading</h1>           Main heading
+    <h2>Smaller heading</h2>       Sub-heading
+    <p>A paragraph of text</p>     Paragraph
+    <div>...</div>                 Container (groups things)
+    <ul>                           Bullet list
+      <li>Item</li>
+    </ul>
+    <ol>                           Numbered list
+      <li>Item</li>
+    </ol>
+    <a href="https://...">text</a> Link
+    <img src="..." alt="..." />    Image
+    <strong>bold</strong>          Bold text
+    <em>italic</em>                Italic text
+
+  ─── CSS BASICS ─────────────────────────────
+
+    color: #ff0000;                Text color
+    background-color: #f0f0f0;    Background
+    font-family: Arial, sans-serif; Font
+    font-size: 1.2rem;            Text size
+    margin: 1rem;                 Space outside element
+    padding: 1rem;                Space inside element
+    border: 1px solid #ccc;       Border
+    border-radius: 8px;           Rounded corners
+    text-align: center;           Center text
+    max-width: 800px;             Maximum width
+    margin: 0 auto;               Center a block element
+
+  ─── VUE REACTIVITY ────────────────────────
+
+    import { ref } from 'vue'
+
+    const count = ref(0)           Create reactive data
+    count.value++                  Change it in script
+    {{ count }}                    Display it in template
+
+  ─── VUE EVENTS ─────────────────────────────
+
+    <button @click="doSomething">  Handle a click
+    @click="count++"               Inline expression
+    v-model="name"                 Two-way binding (forms)
+
+  ─── VUE DIRECTIVES ─────────────────────────
+
+    v-if="condition"               Show only if true
+    v-else                         Show if v-if was false
+    v-for="item in list"           Repeat for each item
+    :key="item.id"                 Unique key for v-for
+
+  ─── COMPONENTS ─────────────────────────────
+
+    Create: src/components/MyComponent.vue
+
+    Import and use:
+      <script setup>
+      import MyComponent from './components/MyComponent.vue'
+      </script>
+      <template>
+        <MyComponent />
+      </template>
+
+  ─── VUE ROUTER ─────────────────────────────
+
+    Install: npm install vue-router
+    Create: src/router/index.js
+
+    <RouterLink to="/about">About</RouterLink>
+    <RouterView />    (shows the current page)
+
+  ─── USEFUL TERMINAL COMMANDS ───────────────
+
+    npm run dev          Start the dev server
+    npm install <pkg>    Install a package
+    npm run build        Build for production
+    cat <file>           View a file
+    quest                Show current objective
+    quest map            Show all quests
+
+═══════════════════════════════════════════════════

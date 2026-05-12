@@ -1,0 +1,19 @@
+Quest Progress: [████████████████] 8/8
+
+The last route is drawn on the grand map.
+
+You have built a complete multi-page web application!
+
+You learned that Vue Router connects paths such as `/` and `/about` to
+view components. You learned that routes are records in a JavaScript
+array, each one pairing a URL path with a component.
+
+You used `<RouterLink>` to create navigation that belongs to the app,
+and `<RouterView>` to show the page for the current route.
+
+This is how small web pages become real applications: structure,
+styling, components, living data, user input, lists, conditions, and
+navigation working together.
+
+Aldric smiles, but he saves the grand words for the final illuminated
+page.

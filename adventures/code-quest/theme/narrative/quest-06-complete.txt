@@ -1,0 +1,52 @@
+Quest Progress: [████████████░░░░] 6/8
+
+The Chronicle now listens. You have learned `@click`, `v-model`, event
+handling, and two-way binding.
+
+Next, the Chronicle must handle many records, not just one. For that we
+use lists and conditions.
+
+`v-for="item in list"` repeats an element for each item in an array.
+
+`:key="item.id"` gives each repeated element a unique ID. Vue requires
+this so it can track which item is which when the list changes.
+
+`v-if="condition"` shows an element only when true.
+
+`v-else` shows when the preceding `v-if` was false.
+
+An array is a list of things: `[item1, item2, item3]`.
+
+An object is a bundle of named values: `{ name: 'Castle', visited: true }`.
+The name before the colon is the label. The value after the colon is the
+data.
+
+Complete example:
+
+```vue
+    <script setup>
+    import { ref } from 'vue'
+
+    const locations = ref([
+      { id: 1, name: 'The Castle', visited: true },
+      { id: 2, name: 'Enchanted Forest', visited: false },
+      { id: 3, name: 'The Village', visited: true },
+    ])
+    </script>
+
+    <template>
+      <h2>Kingdom Directory</h2>
+      <ul>
+        <li v-for="place in locations" :key="place.id">
+          {{ place.name }}
+          <span v-if="place.visited">✓ Visited</span>
+          <span v-else>Not yet visited</span>
+        </li>
+      </ul>
+    </template>
+```
+
+Here, Vue creates one `<li>` for each place. If `place.visited` is true,
+it shows the visited mark. Otherwise it shows the second span.
+
+Add `v-for` to any `.vue` file to complete this quest.

@@ -1,0 +1,13 @@
+services:
+  code-quest:
+    build:
+      context: ../..
+      dockerfile: adventures/code-quest/Dockerfile
+    image: code-quest
+    hostname: code-forge
+    tty: true
+    stdin_open: true
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./project:/home/traveler/project

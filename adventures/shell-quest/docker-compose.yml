@@ -1,0 +1,9 @@
+services:
+  shell-quest:
+    build:
+      context: ../..
+      dockerfile: adventures/shell-quest/Dockerfile
+    image: shell-quest
+    hostname: linuxia
+    tty: true
+    stdin_open: true

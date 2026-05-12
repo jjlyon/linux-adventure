@@ -1,0 +1,66 @@
+Quest Progress: [██████████████░░] 7/8
+
+Your Chronicle can now show the many and the few. You have learned
+`v-for`, `v-if`, `v-else`, `:key`, arrays, and objects.
+
+Your Chronicle has grown! Time to split it into separate pages with
+navigation.
+
+Routing means connecting URLs, like `/about`, to different page
+components. When the URL changes, Vue shows a different view without
+leaving your app.
+
+Step 1: install Vue Router. Run this in the terminal inside `~/project/`:
+
+  npm install vue-router
+
+Step 2: create `src/router/index.js`:
+
+```js
+     import { createRouter, createWebHistory } from 'vue-router'
+     import Home from '../views/Home.vue'
+     import About from '../views/About.vue'
+
+     const routes = [
+       { path: '/', component: Home },
+       { path: '/about', component: About },
+     ]
+
+     const router = createRouter({
+       history: createWebHistory(),
+       routes,
+     })
+
+     export default router
+```
+
+Step 3: create `src/views/` directory with `Home.vue` and `About.vue`.
+A view is a component used as a whole page.
+
+Step 4: update `src/main.js`:
+
+```js
+     import { createApp } from 'vue'
+     import App from './App.vue'
+     import router from './router'
+     import './style.css'
+
+     createApp(App).use(router).mount('#app')
+```
+
+Step 5: update `App.vue`:
+
+```vue
+     <template>
+       <nav>
+         <RouterLink to="/">Home</RouterLink>
+         <RouterLink to="/about">About</RouterLink>
+       </nav>
+       <RouterView />
+     </template>
+```
+
+`RouterLink` creates navigation links. `RouterView` is where the current
+page appears.
+
+Create `src/router/index.js` to complete this quest.

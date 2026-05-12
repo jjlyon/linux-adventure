@@ -1,0 +1,19 @@
+The final craft is navigation: many pages inside one application.
+
+Set up Vue Router for multi-page navigation.
+
+In `~/project/`, run `npm install vue-router`.
+
+Create `src/router/index.js` and define routes for `/` and `/about`.
+
+Create `src/views/` and add `Home.vue` plus `About.vue`.
+
+Update `src/main.js` so the app uses the router.
+
+Update `App.vue` so it contains `<RouterLink>` links and a
+`<RouterView />`.
+
+If you need help, read `project/vue-reference.txt` or visit the official
+Vue docs at vuejs.org.
+
+Create `src/router/index.js` to complete this quest.

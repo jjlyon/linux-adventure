@@ -1,0 +1,14 @@
+Now let the people speak to the Chronicle.
+
+Add user interaction with `v-model` and `@click`.
+
+You can create an `<input>` element and bind it to a ref, such as
+`v-model="guestName"`.
+
+Use `placeholder="Your name"` to show helpful text inside the input.
+
+Use `@click="addEntry"` on a button when you want a function to run.
+
+The guest book example from Aldric's last lesson is your guide.
+
+Add `v-model` to any `.vue` file to complete this quest.
